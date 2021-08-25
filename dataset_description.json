@@ -11,5 +11,8 @@
         ""
     ],
     "BIDSVersion": "1.0.0",
-    "Acknowledgements": "The authors wish to thank Ziaeian Hospital in Tehran for providing staff time and equipment for data collection in this study. We are grateful to the patients and their families who participated in this study. "
+    "Acknowledgements": "The authors wish to thank Ziaeian Hospital in Tehran for providing staff time and equipment for data collection in this study. We are grateful to the patients and their families who participated in this study. ",
+    "Funding": [
+        "This work was partially funded by the Cognitive Sciences & Technologies Council of Iran and by the grant G970736 from Sharif University of Technology, which covered the cost of data collection. The funders had no role in the study conceptualization and design, data collection and analysis, decision to publish, or preparation of the manuscript. "
+    ]
 }
