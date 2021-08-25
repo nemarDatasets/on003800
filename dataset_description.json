@@ -1,7 +1,14 @@
 {
-  "Authors": ["Mojtaba Lahijanian"],
-  "Name": "Auditory Gamma Entrainment",
-  "License": "CC0",
-  "ReferencesAndLinks": [""],
-  "BIDSVersion": "1.0.0"
+    "Authors": [
+        "Mojtaba Lahijanian"
+    ],
+    "Name": "Auditory Gamma Entrainment",
+    "License": "CC0",
+    "ReferencesAndLinks": [
+        ""
+    ],
+    "BIDSVersion": "1.0.0",
+    "EthicsApprovals": [
+        "This study was approved by the Review Board of Tehran University of Medical Sciences (Approval ID: IR.TUMS.MEDICINE.REC.1398.524) and all participants provided informed consent before participating and were free to withdraw at any time."
+    ]
 }
