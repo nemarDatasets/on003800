@@ -1,0 +1,24 @@
+{
+  "PowerLineFrequency": 50,
+  "SoftwareFilters": {
+    "FilterDescription": {
+      "Description": "1Hz high pass filter, 50Hz notch filter"
+    }
+  },
+  "EEGPlacementScheme": "10-20",
+  "EEGReference": "average",
+  "InstitutionAddress": "Tehran, Iran",
+  "InstitutionalDepartmentName": "Geriatric Medicine",
+  "InstitutionName": "Ziaeian Hospital",
+  "Instructions": "During the experiment, participants were seated comfortably with open eyes in a quiet room. They were instructed to relax their body to avoid muscle artifacts and move their head as little as possible.",
+  "TaskDescription": "Before the main task (Auditory Gamma Entrainment), a one-minute data was recorded with open eyes for measuring raw resting-state potentials.",
+  "TaskName": "Rest",
+  "MiscChannelCount": 0,
+  "RecordingType": "continuous",
+  "RecordingDuration": 60,
+  "SamplingFrequency": 250,
+  "EEGChannelCount": 19,
+  "EOGChannelCount": 0,
+  "ECGChannelCount": 0,
+  "EMGChannelCount": 0
+}

@@ -1,0 +1,12 @@
+onset	duration	sample	trial_type	response_time	stim_file	value
+0.00	40	1	Stimulus	n/a	n/a	2
+40.00	20	10001	Rest	n/a	n/a	1
+60.00	40	15001	Stimulus	n/a	n/a	2
+100.00	20	25001	Rest	n/a	n/a	1
+120.00	40	30001	Stimulus	n/a	n/a	2
+160.00	20	40001	Rest	n/a	n/a	1
+180.00	40	45001	Stimulus	n/a	n/a	2
+220.00	20	55001	Rest	n/a	n/a	1
+240.00	40	60001	Stimulus	n/a	n/a	2
+280.00	20	70001	Rest	n/a	n/a	1
+300.00	40	75001	Stimulus	n/a	n/a	2

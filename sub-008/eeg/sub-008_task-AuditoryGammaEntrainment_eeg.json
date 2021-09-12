@@ -1,0 +1,24 @@
+{
+  "PowerLineFrequency": 50,
+  "SoftwareFilters": {
+    "FilterDescription": {
+      "Description": "1Hz high pass filter, 50Hz notch filter"
+    }
+  },
+  "EEGPlacementScheme": "10-20",
+  "EEGReference": "average",
+  "InstitutionAddress": "Tehran, Iran",
+  "InstitutionalDepartmentName": "Geriatric Medicine",
+  "InstitutionName": "Ziaeian Hospital",
+  "Instructions": "During the experiment, participants were seated comfortably with open eyes in a quiet room. They were instructed to relax their body to avoid muscle artifacts and move their head as little as possible.",
+  "TaskDescription": "Two speakers were placed in front of the participant 50cm apart from each other and directly pointed at the participant's ears at a distance of 50cm. The sound intensity was around -40dB within a fixed range for all participants. Before starting the task, the participant was asked if the volume was loud enough and the sound volume was set at a comfortable level for each participant. The auditory stimulus was a 5kHz carrier tone amplitude modulated with a 40Hz rectangular wave (40Hz On and Off cycles). Since a 40Hz audio signal cannot be easily heard, the 5KHz carrier frequency was used to render the 40Hz pulse train audible. In order to minimize the effect of the carrier sound, the duty cycle of the modulating 40Hz waveform was set to 4% (1ms of the 25ms cycle was On). The auditory stimulant was generated in MATLAB and played as a .wav file. This file consisted of six trials of 40sec stimulus interleaved by five trials of 20sec rest (silence). The entire session resulted in 340sec (6*40+5*20) of recorded EEG signal.",
+  "TaskName": "AuditoryGammaEntrainment",
+  "MiscChannelCount": 0,
+  "RecordingType": "continuous",
+  "RecordingDuration": 340,
+  "SamplingFrequency": 250,
+  "EEGChannelCount": 19,
+  "EOGChannelCount": 0,
+  "ECGChannelCount": 0,
+  "EMGChannelCount": 0
+}
