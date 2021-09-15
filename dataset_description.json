@@ -1,18 +1,7 @@
 {
-    "Authors": [
-        "Mojtaba Lahijanian",
-        "Mohammad Javad Sedghizadeh",
-        "Hamid Aghajan",
-        "Zahra Vahabi"
-    ],
-    "Name": "Auditory Gamma Entrainment",
-    "License": "CC0",
-    "ReferencesAndLinks": [
-        ""
-    ],
-    "BIDSVersion": "1.0.0",
-    "EthicsApprovals": [
-        "This study was approved by the Review Board of Tehran University of Medical Sciences (Approval ID: IR.TUMS.MEDICINE.REC.1398.524) and all participants provided informed consent before participating and were free to withdraw at any time."
-    ],
-    "Acknowledgements": "The author wish to thank Ziaeian Hospital in Tehran for providing staff time and equipment for data collection in this study. I am grateful to the patients and their families who participated in this study."
+  "Authors": ["Mojtaba Lahijanian", "Mohammad Javad Sedghizadeh", "Hamid Aghajan", "Zahra Vahabi"],
+  "Name": "Auditory Gamma Entrainment",
+  "License": "CC0",
+  "ReferencesAndLinks": [""],
+  "BIDSVersion": "1.0.0"
 }
