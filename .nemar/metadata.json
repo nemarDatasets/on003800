@@ -1,0 +1,23 @@
+{
+  "version": "2.0",
+  "dataset_id": "on003800",
+  "source": "openneuro",
+  "source_id": "ds003800",
+  "title": "Auditory Gamma Entrainment",
+  "authors": {
+    "Mojtaba Lahijanian": {},
+    "Mohammad Javad Sedghizadeh": {},
+    "Hamid Aghajan": {},
+    "Zahra Vahabi": {}
+  },
+  "license": "CC0",
+  "dataset_type": "raw",
+  "related_identifiers": [
+    {
+      "identifier": "10.18112/openneuro.ds003800.v1.0.0",
+      "identifier_type": "DOI",
+      "relation_type": "IsIdenticalTo"
+    }
+  ],
+  "pipeline_stage": "seeded"
+}
