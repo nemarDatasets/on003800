@@ -16,3 +16,16 @@ Data from all the participants were preprocessed identically following Makoto's 
 
 > Instructions
 During the experiment, participants were seated comfortably with open eyes in a quiet room. They were instructed to relax their body to avoid muscle artifacts and move their head as little as possible.
+
+---
+
+## Curation history
+
+2026-05-11 — BIDS compliance curation pass on the NEMAR import. Commits `9546de8`..`a431c25`. Initial state: 1 error + 557 warnings; final state: 0 errors + 417 warnings (the remaining warnings are recommended-but-missing metadata fields that require information not present in the dataset — equipment details, fiducial coordinates, etc.). Specific changes:
+
+- Zero-padded `participant_id` in `participants.tsv` from `sub-NN` to `sub-NNN` to match the subject directory names. Fixes the `PARTICIPANT_ID_MISMATCH` error.
+- Corrected `Units` in all `*_events.json` from `"second"` to the BIDS-required `"s"` for the `onset`, `duration`, and `response_time` columns.
+- Dropped the `task-AuditoryGammaEntrainment` entity from `*_electrodes.tsv` and `*_coordsystem.json` filenames via `git mv`. Electrode positions and coordinate systems do not vary by task within a session, per BIDS-EEG; the files now inherit to the Rest scans as well.
+- Set `type=EEG` for all 19 rows in every subject’s `channels.tsv`. The `type` column was previously `n/a`, which caused the validator to count 0 EEG channels and mismatch with the JSON’s correct `EEGChannelCount: 19`. The `units` column is left as `n/a` pending clarification of the recording’s amplitude units.
+- In every `*_eeg.json` sidecar: renamed `MiscChannelCount` to the BIDS-canonical `MISCChannelCount`, and added `TriggerChannelCount: 0` (verified by inspecting `channels.tsv`, the `.set` file’s `EEG.chanlocs`, and the README’s description of MATLAB-script-generated events stored in `events.tsv` rather than a hardware trigger).
+- Updated `dataset_description.json`: bumped `BIDSVersion` from `1.0.0` (which predates BIDS-EEG) to `1.9.0`; added `DatasetType: "raw"` and a `GeneratedBy` entry pointing back to this section and to the git log; cleaned `ReferencesAndLinks` from a single empty-string entry to an empty array.
