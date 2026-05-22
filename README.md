@@ -29,3 +29,16 @@ During the experiment, participants were seated comfortably with open eyes in a 
 - Set `type=EEG` for all 19 rows in every subject’s `channels.tsv`. The `type` column was previously `n/a`, which caused the validator to count 0 EEG channels and mismatch with the JSON’s correct `EEGChannelCount: 19`. The `units` column is left as `n/a` pending clarification of the recording’s amplitude units.
 - In every `*_eeg.json` sidecar: renamed `MiscChannelCount` to the BIDS-canonical `MISCChannelCount`, and added `TriggerChannelCount: 0` (verified by inspecting `channels.tsv`, the `.set` file’s `EEG.chanlocs`, and the README’s description of MATLAB-script-generated events stored in `events.tsv` rather than a hardware trigger).
 - Updated `dataset_description.json`: bumped `BIDSVersion` from `1.0.0` (which predates BIDS-EEG) to `1.9.0`; added `DatasetType: "raw"` and a `GeneratedBy` entry pointing back to this section and to the git log; cleaned `ReferencesAndLinks` from a single empty-string entry to an empty array.
+
+## NEMAR curation changes (2026-05-21)
+
+BIDS validator: 0 errors + 417 warnings -> 0 errors + 417 warnings. Raw `.set` binary payloads unchanged.
+
+Re-validation pass against the latest validator (nemar-cli) after the 2026-05-11 curation. The dataset was already at zero errors; all remaining 417 warnings are recommended-but-missing metadata fields that require information not present in this dataset and that the curation policy forbids inventing. No file changes were required.
+
+### Remaining warnings (left as-is on purpose)
+- `SIDECAR_KEY_RECOMMENDED` on every `*_eeg.set`: `Manufacturer`, `ManufacturersModelName`, `SoftwareVersions`, `DeviceSerialNumber`, `CapManufacturer`, `CapManufacturersModelName`, `EEGGround`, `HardwareFilters`, `HeadCircumference`, `SubjectArtefactDescription`, `CogAtlasID`, `CogPOID` (24 files x 12 fields = 288 warnings). Why: equipment-, cap-, and subject-level metadata not documented in the dataset README, sidecars, or `.set` headers; the curation policy forbids inventing these.
+- `SIDECAR_KEY_RECOMMENDED:StimulusPresentation` on each `*_events.tsv` of the AuditoryGammaEntrainment task (13 warnings). Why: the README mentions MATLAB-script-generated audio but provides no OS / software-version detail required by the BIDS schema.
+- `JSON_KEY_RECOMMENDED` on every `*_coordsystem.json`: `FiducialsCoordinates`/`...System`/`...Units`/`...SystemDescription` and the four matching `AnatomicalLandmark*` keys (13 subjects x 8 fields = 104 warnings). Why: the dataset has no measured 3D fiducial or landmark coordinates; these can only be supplied by the original recording lab.
+- `EVENTS_TSV_MISSING` on the 11 `sub-NNN/eeg/sub-NNN_task-Rest_eeg.set` files (11 warnings). Why: the Rest scans are one-minute resting-state recordings with no event structure; the original curator chose to leave the events.tsv absent rather than commit an empty placeholder. Renaming `Rest` -> `rest` to suppress the validator under the BIDS `rest` convention was considered and rejected as overly invasive (touches `.set` filenames; the binary-payload-immutability rule applies to renames affecting the recorded modality).
+- `JSON_KEY_RECOMMENDED:HEDVersion` on `dataset_description.json` (1 warning). Why: the dataset does not use HED tags, so declaring an `HEDVersion` would be misleading.
