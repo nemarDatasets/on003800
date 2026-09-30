@@ -1,23 +1,85 @@
 {
   "version": "2.0",
-  "dataset_id": "on003800",
-  "source": "openneuro",
-  "source_id": "ds003800",
+  "pipeline_stage": "validated",
   "title": "Auditory Gamma Entrainment",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
     "Mojtaba Lahijanian": {},
     "Mohammad Javad Sedghizadeh": {},
     "Hamid Aghajan": {},
     "Zahra Vahabi": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds003800.v1.0.0",
       "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on003800",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on003800",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
-  "pipeline_stage": "seeded"
+  "funding_references": [
+    {
+      "funder_name": "Cognitive Sciences & Technologies Council of Iran"
+    },
+    {
+      "funder_name": "Sharif University of Technology",
+      "award_number": "G970736"
+    }
+  ],
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "364 MB (49 files)"
+  ],
+  "formats": [
+    ".json",
+    ".md",
+    ".set",
+    ".tsv",
+    ".txt",
+    ".yml"
+  ],
+  "description": "EEG recordings from elderly participants with dementia during auditory gamma entrainment. The stimulus was a 5 kHz carrier tone amplitude-modulated with a 40 Hz pulse train, presented in alternating stimulation and silence blocks. The dataset also includes a one-minute eyes-open resting-state recording. It is intended for investigating how 40 Hz auditory stimulation affects brain oscillations in Alzheimer's disease and related dementia.",
+  "methods_description": "EEG was recorded from 19 monopolar channels in the 10/20 system, referenced to the earlobes, at 250 Hz with impedance below 20 kOhm. The stimulus was generated in MATLAB and played through two speakers placed 50 cm from the participant. It consisted of six 40 s stimulation trials interleaved with five 20 s rest trials (340 s total). Preprocessing followed Makoto's pipeline in EEGLAB: 1 Hz high-pass filtering, line-noise removal, bad-channel rejection and interpolation, average re-referencing, ASR, ICA, and dipole fitting.",
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "gamma entrainment"
+    },
+    {
+      "term": "auditory stimulation"
+    },
+    {
+      "term": "Alzheimer Disease",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D000544"
+    },
+    {
+      "term": "Dementia",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D003704"
+    },
+    {
+      "term": "40 Hz stimulation"
+    },
+    {
+      "term": "resting state"
+    }
+  ],
+  "source_hash": "79f3a24b2f551a75c1b165e0d281e7c21d074fe68818071f62355d7968a48b1e"
 }
